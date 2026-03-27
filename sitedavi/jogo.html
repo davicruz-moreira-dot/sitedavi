@@ -1,0 +1,355 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>GOD OF WAR</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* MENU */
+nav a {
+    color: red;
+    text-decoration: none;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #00c3ff;
+}
+
+.btn {
+    background: #00c3ff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* SEÇÕES */
+section {
+    min-height: 100vh;
+    padding-top: 120px;
+    color: white;
+}
+
+/* INICIO */
+#inicio {
+    background: url('imagens/good.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* SOBRE */
+#sobre {
+    background: url('imagens/godd.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* SERVIÇOS */
+#servicos {
+    background: url('imagens/imagem10.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* CONTATO */
+#contato {
+    background: url('imagens/imagem12.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* ESCURECER FUNDO */
+.overlay {
+    background: rgba(0,0,0,0.7);
+    min-height: 100vh;
+    padding: 120px 40px;
+}
+
+/* TEXTO */
+h1 {
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 600px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* TEXTO INICIO */
+.inicio-texto {
+    display: none;
+    color: white;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+/* BANNERS */
+.banners {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.jogo {
+    width: 250px;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.jogo img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.jogo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+.jogo h3 {
+    color: white;
+    margin-top: 10px;
+}
+
+/* BOTÃO COMPRAR */
+.comprar {
+    background: red;
+    border: none;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.comprar:hover {
+    background: #00c3ff;
+}
+
+/* RODAPÉ */
+footer {
+    background: black;
+    color: white;
+    padding: 40px 20px 10px;
+}
+.rodape-coluna {
+    max-width: 250px;
+    margin: 10px;
+    text-align: center;
+}
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.rodape-coluna {
+    max-width: 250px;
+    margin: 10px;
+}
+
+.rodape-coluna h3 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.rodape-coluna a {
+    color: white;
+    text-decoration: none;
+}
+
+.rodape-coluna a:hover {
+    color: #00c3ff;
+}
+
+.direitos {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">GOD OF WAR</div>
+
+    <nav>
+        <a onclick="mostrarInicio()">Início</a>
+        <span class="inicio-texto" id="inicioTexto">Página Início</span>
+
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="btn">Entrar</button>
+
+</header>
+
+<!-- INICIO -->
+<section id="inicio">
+    <div class="overlay">
+
+        <h1>Jogos à Venda</h1>
+
+        <p>
+            Confira os principais jogos da saga God of War disponíveis para compra.
+        </p>
+
+        <div class="banners">
+
+            <div class="jogo">
+                <img src="imagens/good.png">
+                <h3>God of War 1</h3>
+                <p>R$ 79,90</p>
+                <button class="comprar">Comprar</button>
+            </div>
+
+            <div class="jogo">
+                <img src="imagens/godd.png">
+                <h3>God of War 2</h3>
+                <p>R$ 89,90</p>
+                <button class="comprar">Comprar</button>
+            </div>
+
+            <div class="jogo">
+                <img src="imagens/imagem10.png">
+                <h3>God of War 3</h3>
+                <p>R$ 99,90</p>
+                <button class="comprar">Comprar</button>
+            </div>
+
+            <div class="jogo">
+                <img src="imagens/imagem12.png">
+                <h3>God of War Ragnarök</h3>
+                <p>R$ 249,90</p>
+                <button class="comprar">Comprar</button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+    <div class="overlay">
+        <h1>Sobre</h1>
+
+        <p>
+            God of War é um jogo de ação e aventura que conta a história de Kratos, um guerreiro espartano que enfrenta deuses e monstros da mitologia em uma jornada cheia de batalhas e desafios. O jogo possui combates intensos, cenários impressionantes e uma história emocionante, onde Kratos luta para sobreviver e proteger seu filho Atreus em um mundo perigoso.
+        </p>
+        <p>
+            <video width="500" height="240" controls>
+  <source src="C:\Users\Aluno\Documents\DAVI M\videoplayback.mp4" type="video/mp4">
+  
+  </video>
+        </p>
+    </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+    <div class="overlay">
+
+        <h1>Serviços</h1>
+
+        <p>
+            Oferecemos serviços completos de jogos para entretenimento e diversão.
+        </p>
+
+        <ul>
+            <li>Instalação e configuração de jogos</li>
+            <li>Suporte técnico</li>
+            <li>Eventos</li>
+        </ul>
+
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+    <div class="overlay">
+
+        <h1>Contato</h1>
+
+        <p>
+            Email: davi_cruz-moreira@estudante.sesisenai.org.br <br>
+            WhatsApp: (45) 99841-9861
+        </p>
+
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+
+    <div class="rodape">
+
+        <div class="rodape-coluna">
+            <h3>GOD OF WAR</h3>
+            <p>Site dedicado à saga God of War com informações, jogos e serviços.</p>
+        </div>
+
+        <div class="rodape-coluna">
+    <h3>Links</h3>
+
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+</div>
+
+        <div class="rodape-coluna">
+            <h3>Contato</h3>
+            <p>Email: davi_cruz-
+
+</footer>
+```
